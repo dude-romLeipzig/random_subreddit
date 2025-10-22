@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  background-color: #0b0b0b;
+  color: #00ffcc;
+  font-family: 'Press Start 2P', monospace;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.outer {
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+  border: 2px solid #00ffcc;
+  box-shadow: 0 0 30px #00ffcc44;
+  padding: 40px;
+  border-radius: 10px;
+  animation: flicker 4s infinite alternate;
+}
+
+.inner {
+  background: #202020;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: inset 0 0 10px #00ffcc33;
+}
+
+h1 {
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+  margin-bottom: 40px;
+}
+
+button {
+  background-color: #111;
+  color: #00ffcc;
+  border: 3px solid #00ffcc;
+  padding: 15px 30px;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00ffcc;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #00ffcc;
+  color: #000;
+  box-shadow: 0 0 25px #ff00ff;
+  transform: scale(1.1);
+}
+
+#result {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #fff;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+a {
+  color: #ff00ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+/* CRT screen flicker effect */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 0.99;
+  }
+  20%, 24%, 55% {
+    opacity: 0.4;
+  }
+}
