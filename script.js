@@ -1,4 +1,4 @@
-const blip = new Audio("blip.mp3"); // make sure it’s MP3 or OGG
+const blip = new Audio("blip.mp3"); 
 blip.preload = "auto";
 
 async function getRandomSubreddit() {
@@ -26,7 +26,7 @@ async function getRandomSubreddit() {
 
 document.getElementById("generate-btn").addEventListener("click", async () => {
   const resultElement = document.getElementById("result");
-  resultElement.textContent = "Spinning the subreddit wheel... 🎰";
+  resultElement.textContent = "Spinning the subreddit wheel... ";
   resultElement.classList.add("loading");
 
   let subreddit = null;
@@ -41,3 +41,4 @@ document.getElementById("generate-btn").addEventListener("click", async () => {
   resultElement.classList.remove("loading");
   resultElement.innerHTML = `<a href="https://www.reddit.com/r/${subreddit}" target="_blank">r/${subreddit}</a>`;
 });
+
